@@ -1,0 +1,111 @@
+html {
+    background-color: #1d2d50;
+
+}
+
+/* this is the name above the nav */
+.Myname {
+    text-shadow: 2px 4px 3px #1e5f74,
+        6px 6px 5px gold;
+    color: #fcdab7;
+    text-align: center;
+    font-family: Monospace, Impact, sans-serif;
+    background-color: #1d2d50;
+    margin-bottom: 0px;
+
+
+}
+
+/* background color and overflow for all of the nav */
+.upnav {
+    background-color: #1e5f74;
+    overflow: hidden;
+    margin-bottom: 0px;
+
+}
+
+.upnav::after {
+    background: gold;
+}
+
+/* inside nav bar text color,float,padding */
+.upnav a {
+    float: left;
+    color: gold;
+    /* text-align: center; */
+    padding: 15px 16px;
+    text-decoration: dotteds;
+    font-size: 1.35rem;
+    font-family: monospace;
+}
+
+/* this is when you point at point on the navbar  */
+.upnav a:hover {
+    background-color: #1d2d50;
+    color: white;
+}
+
+.upnav a.active {
+    background: #fcdab7;
+    color: black;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+    border-radius: 3em 4em 4em 3.5em;
+    background-color: #fcdab7;
+    padding: 2em;
+    margin: 0px 1.75rem 1.75rem 1.75rem;
+    max-width: 20em;
+    max-height: 39em;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text],
+select,
+textarea {
+    min-width: 100%;
+    /* Full width */
+    padding: 12px;
+    /* Some padding */
+    border: 1px solid #ccc;
+    /* Gray border */
+    border-radius: 4px 3px 2px;
+    /* Rounded borders */
+    box-sizing: border-box;
+    /* Make sure that padding and width stays in place */
+    margin-top: 1em;
+    /* Add a top margin */
+    margin-bottom: 1em;
+    /* Bottom margin */
+    resize: vertical
+        /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: #1d2d50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: #133b5c;
+}
+
+
+
+.test {
+    background-color: #1d2d50;
+    max-width: 100rem;
+}
+
+
+/* .btn btn-primary btn-lg {
+    align-items: center;
+    align-self: center;
+} */
