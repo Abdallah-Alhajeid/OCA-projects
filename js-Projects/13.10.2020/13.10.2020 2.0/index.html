@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+var Name= prompt("PLease Enter Your Name * The Grades out of 100");
+        
+        const numOfsub = 6;
+
+        
+        function isNumeric(num){
+            return !isNaN(num)
+        }
+        
+        myFunction();
+  
+  
+  function myFunction() {
+    
+      do {
+        var math= prompt("Enter Your marks of math");
+        if(!isNumeric(math) || 0 > math || math >100){
+            alert("YOU SHOULD ENTER NUMBER BETWEEN 0 AND 100");
+        }
+      }
+      while (!isNumeric(math) || 0 > math || math >100);
+      
+      do {
+        var eng= prompt("Enter Your marks of english");
+        if(!isNumeric(eng) || 0 > eng || eng >100){
+            alert("YOU SHOULD ENTER NUMBER BETWEEN 0 AND 100");
+        }
+      }
+      while (!isNumeric(eng) || 0 > eng || eng >100);
+      do {
+        var ar= prompt("Enter Your marks of Arabic");
+        if(!isNumeric(ar) || 0 > ar || ar >100){
+            alert("YOU SHOULD ENTER NUMBER BETWEEN 0 AND 100");
+        }
+      }
+      while (!isNumeric(ar) || 0 > ar || ar >100);
+
+      do {
+        var bio= prompt("Enter Your marks of Biology");
+        if(!isNumeric(bio) || 0 > bio || bio >100){
+            alert("YOU SHOULD ENTER NUMBER BETWEEN 0 AND 100");
+        }
+      }
+      while (!isNumeric(bio) || 0 > bio || bio >100);
+
+
+      do {
+        var comp= prompt("Enter Your marks of Computer");
+        if(!isNumeric(comp) || 0 > comp || comp >100){
+            alert("YOU SHOULD ENTER NUMBER BETWEEN 0 AND 100");
+        }
+      }
+      while (!isNumeric(comp) || 0 > comp ||comp >100);
+
+
+      do {
+        var rel= prompt("Enter Your marks of Religion");
+        if(!isNumeric(rel) || 0 > rel || rel >100){
+            alert("YOU SHOULD ENTER NUMBER BETWEEN 0 AND 100");
+        }
+      }
+      while (!isNumeric(rel) || 0 > rel || rel >100);
+      
+      
+      
+      var total = parseInt(math) + parseInt(ar) + parseInt(eng)+ parseInt(rel) + parseInt(comp)+ parseInt(bio) ;
+      
+      
+      alert("The SUM of all subjects is :" + total  / 6 );
+      var Avg = ( total / numOfsub  );
+
+      if (Avg < 50 ){
+          alert("Let's see you next year")
+      }
+      
+      if (50 <= Avg && Avg < 60 ){
+          alert("Pass")
+      }
+      if (60 <= Avg && Avg < 70 ){
+          alert("average")
+      }
+      if (70 <= Avg && Avg < 80 ){
+          alert("good")
+      }
+      if (80 <= Avg && Avg < 90 ){
+          alert("very good")
+      }
+      if (90 <= Avg && Avg < 100 ){
+          alert("Excellent")
+      }
+
+        }
+    </script>
+</body>
+</html>
