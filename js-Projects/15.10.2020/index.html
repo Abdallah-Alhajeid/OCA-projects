@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Create a function called oddArray
+// that accept an array
+// and return an array have only the odd elemnts
+​
+// var nums= [1,2,3,8,9]
+// Ex: oddArray(nums) => [1,3,9]
+​
+// ** solve it one time using for loop and another using while loop
+// **try more cases by your self
+​
+​
+/******* Start Your Code *********/
+  
+var nums = [1, 2, 3, 8, 9];
+oddNumber = [];
+function oddArrays(x) {
+    for (var i = 0; i < x.length; i++) {
+        if (x[i] % 2 != 0) {
+            oddNumber.push(x[i]);
+        }
+    }
+    console.log(oddNumber);
+}
+oddArrays(nums);
+// ​let arr = [1,2,3,8,9]
+
+// let odds = arr.filter(n => n%2)
+
+// console.log(odds)
+​
+/******* End Your Code ********* */
+​
+​
+​
+​
+// Create a function called aveArray
+// that accept an array
+// and return the average of the numbers inside this array
+​
+// var nums= [1,2,3,8,9]
+// Ex: aveArray(nums) => 4.6
+​
+// var nums2= [1,2,3,8,9,77]
+// Ex: aveArray(nums) => 16.6
+​
+// ** solve it one time using for loop and another using while loop
+// **try more cases by your self
+​
+​
+/******* Start Your Code *********/
+var nums2 = [1, 2, 3, 8, 9, 77];
+function aveArray(x) {
+    var sumNum = 0;
+    var avg = 0;
+    var len = x.length;
+    for (var i = 0; i < len; i++) {
+        sumNum += x[i];
+    }
+    avg = parseFloat(sumNum / len);
+    console.log(avg);
+}
+aveArray(nums);
+aveArray(nums2);
+// ​
+// ​let average = (array) => array.reduce((a, b) => a + b) / array.length;
+// console.log(average([1,2,3,8,9]));
+/******* End Your Code ********* */
+​
+​
+​
+​
+// Create a function called factorial
+// that takes a single parameter n,
+// and return the product of all integers up to n starting from 1
+// Ex: factorial(2); => 2 * 1 => 2
+// Ex: factorial(4); => 4 * 3 * 2 * 1 => 24
+​
+​
+​
+/******* Start Your Code *********/
+​  
+function factorial(x) {
+    let factNum = 1;
+    for (var i = x; i >= 1; i--) {
+        factNum = factNum * i;
+    }
+    console.log(factNum);
+}
+factorial(2);
+factorial(4);
+​
+/******* End Your Code ********* */
+    </script>
+</body>
+</html>
