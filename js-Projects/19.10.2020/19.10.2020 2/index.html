@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Person {
+  constructor(name,age,Place){
+    this.name = name;
+    this.age =  age;
+  }
+
+  getInfo = () => console.log(`Hello my name is ${this.name} I am ${this.age} years old, i live in ${this.Place}.`)
+  getInfo = (name) => console.log(`Hello my name is ${name}.`)
+}
+
+class Child extends Person {
+  constructor(name,age,school){
+   super(name,age);
+    this.age = age;
+    this.name = name;
+    this.school = school;
+  }
+  getInfo = ()=> console.log(`Hello my name is ${this.name}, i am ${this.age} years old , i study in ${this.school}`)
+}
+
+class Car {
+  constructor (type,year){
+    this.type = type;
+    this.year = year
+  }
+
+  carSpec =() => console.log(`This is a ${this.type} Car, It was manufacturer in ${this.year}.`)
+  }
+
+
+class Animal {
+
+  constructor(name,age,type){    
+    this.name = name;
+    this.type = type;
+    this.age = age;
+  }
+
+
+  petInfo = () => console.log(`this is ${this.name}, he's ${this.age} years old, hes a ${this.type}.`)
+ }
+
+let personOne = new Person("sansa",18);
+let personTwo = new Person("ned",57);
+console.log(personOne);
+personTwo.getInfo("sansa");
+
+let childOne = new Child("ghasaan", 15, "qutiba");
+childOne.getInfo();
+
+let carOne = new Car("tesla",2020);
+let carTwo = new Car("prius",2011);
+console.log(carTwo);
+carOne.carSpec();
+
+let animalOne = new Animal("losi", 2,"cat");
+let animalTwo = new Animal("Simba",4,"dog");
+
+console.log(animalOne);
+animalTwo.petInfo();
+    </script>
+</body>
+</html>

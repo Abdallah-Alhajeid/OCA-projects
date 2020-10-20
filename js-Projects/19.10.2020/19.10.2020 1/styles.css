@@ -1,0 +1,22 @@
+.form{
+    border: 1px solid;
+    border-radius: 15px 15px 15px 15px;
+    background-image: url(formm.png);
+    width: 350px;
+    height: 250px;
+
+}
+.button{
+    background-color: olivedrab;
+    /* border-radius: 70%; */
+    padding: 10px;
+    margin-left: 220px;
+    transition-duration: 0.4s;
+    color: white;
+
+}
+
+.button:hover {
+    background-color: yellowgreen; /* Green */
+    color:black;
+  }
