@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="javascript.js"></script>
+    <!-- <script src="javascript.js"></script> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/a9545f17e8.js" crossorigin="anonymous"></script>
@@ -60,16 +60,7 @@ function email() {
 
 if (!((document.getElementById("email").value).match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)) && document.getElementById("email").value != "") {
 
-
-    document.getElementById("email").style.boxShadow = " 0 0 10px red";
-    document.getElementById("email").style.color = "red";
-
-
-} else {
-    document.getElementById("email").style.boxShadow = " none";
-    document.getElementById("email").style.color = "initial";
 }
-
 }
 
 
@@ -78,15 +69,9 @@ function password() {
 if (!((document.getElementById("password").value).match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/)) && document.getElementById("password").value != "") {
 
 
-    document.getElementById("password").style.boxShadow = " 0 0 10px red";
-    document.getElementById("password").style.color = "red";
 
 
-} else {
-    document.getElementById("password").style.boxShadow = " none";
-    document.getElementById("password").style.color = "initial";
-}
-
+} 
 
 
 
