@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+<script>
+    class Person {
+    #id;
+    #name;
+    #age;
+    constructor (id,name,age){
+        this.#id=id;
+        this.#name=name;
+        this.#age=age;
+    }
+Greeting() {
+    console.log("Hello!");
+}
+
+getData(){return `id = ${this.#id}, name= ${this.#name}, age= ${this.#age}`}
+
+}
+var Mohammad = new Person(1,"Mohammad",31);
+var gorage  =new Person(2,"gorage ",68);
+
+class Teacher extends Person{
+    #major="GameDevs";
+    constructor (id,name,age){
+        super(id,name,age);
+    }
+        getData=()=>super.getData() + `,major = ${this.#major}`;
+}
+var sobhi = new Teacher(1,"sobhi",26);
+sobhi.Greeting();
+
+console.log(sobhi.getData());
+class Car{
+    #id;
+    #type;
+    #year;
+    constructor(id,type,year){
+        this.#id=id;
+        this.#type=type;
+        this.#year=year;
+    }
+    start(){
+        console.log("the car is running"+this.#calc(5,10));
+    }
+    #calc(x,y){
+        return x+y;
+    }
+}
+
+var bmw = new Car(2,"car",2020);
+var h100 = new Car(2,"bus",2004);
+h100.start();
+
+class Animal {
+    #id;
+    #name;
+    #isPet=new Boolean();
+    constructor (id,name,isPet){
+        this.#id=id;
+        this.#name=name;
+        this.#isPet=isPet;
+    }
+    homeAnimal(){
+        if(this.#isPet){
+            return this;
+        }
+    }
+}
+var cat = new Animal(1,"lio",false);
+var dog = new Animal(2,"obe",true);
+
+printObj =(obj)=>console.log(obj);
+printObj(dog);
+</script>    
+</body>
+</html>
