@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stop-Watch</title>
+    <style>
+      body {
+        background-color: royalblue;
+        box-sizing: border-box;
+      }
+      .stopWatch {
+        text-align: center;
+        margin-top: 10rem;
+        margin-left: 40%;
+        align-items: center;
+        border: 7px blue dotted;
+        width: 20rem;
+        height: 20rem;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        box-shadow: whitesmoke 0px 0px 15px 5px;
+        background-color: rgb(164, 183, 239);
+      }
+      .sw {
+        margin-top: 3rem;
+        border-radius: 50%;
+        padding: 1.5rem;
+        background-color: royalblue;
+        color: seashell;
+        outline: none;
+      }
+      .time {
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="stopWatch">
+      <div class="container">
+        <div class="time" id="output">00:00:00:00</div>
+        <button class="sw" id="startPause" onclick="startPause()">Start</button>
+        <button class="sw" onclick="reset()">Reset</button>
+      </div>
+    </div>
+    <script>
+      var time = 0;
+      var running = 0;
+      function startPause() {
+        if (running == 0) {
+          running = 1;
+          increment();
+          document.getElementById("startPause").innerHTML = "Pause";
+        } else {
+          running = 0;
+          document.getElementById("startPause").innerHTML = "Resume";
+        }
+      }
+      function reset() {
+        running = 0;
+        time = 0;
+        document.getElementById("output").innerHTML = "00:00:00:00";
+        document.getElementById("startPause").innerHTML = "Start";
+      }
+      function increment() {
+        if (running == 1) {
+          setTimeout(function () {
+            time++;
+            var hrs = Math.floor(time / 10 / 60 / 60);
+            if (hrs <= 9) {
+              hrs = "0" + hrs;
+            }
+            var mins = Math.floor(time / 10 / 60);
+            if (mins <= 9) {
+              mins = "0" + mins;
+            }
+            var secs = Math.floor(time / 10);
+            if (secs <= 9) {
+              secs = "0" + secs;
+            }
+            var tenths = Math.floor(time % 10);
+            if (tenths <= 9) {
+              tenths = "0" + tenths;
+            }
+            document.getElementById("output").innerHTML =
+              hrs + ":" + mins + ":" + secs + ":" + tenths;
+            increment();
+          }, 100);
+        }
+      }
+    </script>
+  </body>
+</html>
